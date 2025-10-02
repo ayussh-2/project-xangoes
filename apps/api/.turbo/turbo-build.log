@@ -1,0 +1,132 @@
+$ tsc
+node_modules/bun-types/globals.d.ts(984,12): error TS2717: Subsequent property declarations must have the same type.  Property '[Symbol.toStringTag]' must be of type '"ArrayBuffer"', but here has type 'string'.
+node_modules/drizzle-orm/gel-core/columns/date-duration.d.ts(1,35): error TS2307: Cannot find module 'gel' or its corresponding type declarations.
+node_modules/drizzle-orm/gel-core/columns/duration.d.ts(1,31): error TS2307: Cannot find module 'gel' or its corresponding type declarations.
+node_modules/drizzle-orm/gel-core/columns/localdate.d.ts(1,32): error TS2307: Cannot find module 'gel' or its corresponding type declarations.
+node_modules/drizzle-orm/gel-core/columns/localtime.d.ts(1,32): error TS2307: Cannot find module 'gel' or its corresponding type declarations.
+node_modules/drizzle-orm/gel-core/columns/relative-duration.d.ts(1,39): error TS2307: Cannot find module 'gel' or its corresponding type declarations.
+node_modules/drizzle-orm/gel-core/columns/timestamp.d.ts(1,36): error TS2307: Cannot find module 'gel' or its corresponding type declarations.
+node_modules/drizzle-orm/gel-core/query-builders/query.d.ts(23,22): error TS2420: Class 'GelRelationalQuery<TResult>' incorrectly implements interface 'SQLWrapper'.
+  Property 'getSQL' is missing in type 'GelRelationalQuery<TResult>' but required in type 'SQLWrapper'.
+node_modules/drizzle-orm/gel-core/roles.d.ts(7,22): error TS2559: Type 'GelRole' has no properties in common with type 'GelRoleConfig'.
+node_modules/drizzle-orm/mysql-core/db.d.ts(1,38): error TS2307: Cannot find module 'mysql2/promise' or its corresponding type declarations.
+node_modules/drizzle-orm/mysql-core/query-builders/delete.d.ts(36,22): error TS2420: Class 'MySqlDeleteBase<TTable, TQueryResult, TPreparedQueryHKT, TDynamic, TExcludedMethods>' incorrectly implements interface 'SQLWrapper'.
+  Property 'getSQL' is missing in type 'MySqlDeleteBase<TTable, TQueryResult, TPreparedQueryHKT, TDynamic, TExcludedMethods>' but required in type 'SQLWrapper'.
+node_modules/drizzle-orm/mysql-core/query-builders/select.d.ts(294,244): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "toSQL" | "$dynamic" | "having" | ... 8 more ... | "$withCache"'.
+node_modules/drizzle-orm/mysql-core/query-builders/select.d.ts(320,247): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "toSQL" | "$dynamic" | "having" | ... 8 more ... | "$withCache"'.
+node_modules/drizzle-orm/mysql-core/query-builders/select.d.ts(346,248): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "toSQL" | "$dynamic" | "having" | ... 8 more ... | "$withCache"'.
+node_modules/drizzle-orm/mysql-core/query-builders/select.d.ts(387,251): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "toSQL" | "$dynamic" | "having" | ... 8 more ... | "$withCache"'.
+node_modules/drizzle-orm/mysql-core/query-builders/select.d.ts(413,245): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "toSQL" | "$dynamic" | "having" | ... 8 more ... | "$withCache"'.
+node_modules/drizzle-orm/mysql-core/query-builders/select.d.ts(454,248): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "toSQL" | "$dynamic" | "having" | ... 8 more ... | "$withCache"'.
+node_modules/drizzle-orm/mysql-core/query-builders/select.d.ts(611,22): error TS2515: Non-abstract class 'MySqlSelectBase<TTableName, TSelection, TSelectMode, TPreparedQueryHKT, TNullabilityMap, TDynamic, TExcludedMethods, TResult, TSelectedFields>' does not implement inherited abstract member getSQL from class 'MySqlSelectQueryBuilderBase<MySqlSelectHKT, TTableName, TSelection, TSelectMode, TPreparedQueryHKT, TNullabilityMap, TDynamic, TExcludedMethods, TResult, TSelectedFields>'.
+node_modules/drizzle-orm/mysql-core/query-builders/select.types.d.ts(138,1149): error TS2344: Type 'MySqlSetOperatorExcludedMethods' does not satisfy the constraint '"offset" | "for" | "as" | "iterator" | "then" | "limit" | "union" | "catch" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "execute" | "leftJoin" | "rightJoin" | ... 14 more ... | "$withCache"'.
+  Type '"session"' is not assignable to type '"offset" | "for" | "as" | "iterator" | "then" | "limit" | "union" | "catch" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "execute" | "leftJoin" | "rightJoin" | ... 14 more ... | "$withCache"'.
+node_modules/drizzle-orm/node-postgres/session.d.ts(2,8): error TS1192: Module '"D:/Projects/GDSC/project-xangoes/apps/api/node_modules/@types/pg/index"' has no default export.
+node_modules/drizzle-orm/pg-core/query-builders/query.d.ts(23,22): error TS2420: Class 'PgRelationalQuery<TResult>' incorrectly implements interface 'SQLWrapper'.
+  Property 'getSQL' is missing in type 'PgRelationalQuery<TResult>' but required in type 'SQLWrapper'.
+node_modules/drizzle-orm/pg-core/roles.d.ts(7,22): error TS2559: Type 'PgRole' has no properties in common with type 'PgRoleConfig'.
+node_modules/drizzle-orm/singlestore-core/columns/bigint.d.ts(13,22): error TS2515: Non-abstract class 'SingleStoreBigInt53Builder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, { unsigned: boolean; }, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/bigint.d.ts(35,22): error TS2515: Non-abstract class 'SingleStoreBigInt64Builder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, { unsigned: boolean; }, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/binary.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreBinaryBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, SingleStoreBinaryConfig, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/boolean.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreBooleanBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, object, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/char.d.ts(16,22): error TS2515: Non-abstract class 'SingleStoreCharBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, SingleStoreCharConfig<T["enumValues"], T["length"]>, { length: T["length"]; }, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/custom.d.ts(24,22): error TS2515: Non-abstract class 'SingleStoreCustomColumnBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, { fieldConfig: Record<string, any> | undefined; customTypeParams: CustomTypeParams<any>; }, { singlestoreColumnBuilderBrand: "SingleStoreCustomColumnBuilderBrand"; }, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/date.d.ts(16,22): error TS2515: Non-abstract class 'SingleStoreDateBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, object, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/date.d.ts(37,22): error TS2515: Non-abstract class 'SingleStoreDateStringBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, object, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/datetime.d.ts(16,22): error TS2515: Non-abstract class 'SingleStoreDateTimeBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, SingleStoreDatetimeConfig<"string" | "date">, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/datetime.d.ts(38,22): error TS2515: Non-abstract class 'SingleStoreDateTimeStringBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, SingleStoreDatetimeConfig<"string" | "date">, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/decimal.d.ts(15,22): error TS2515: Non-abstract class 'SingleStoreDecimalBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreDecimalConfig<"string" | "number" | "bigint">, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/decimal.d.ts(36,22): error TS2515: Non-abstract class 'SingleStoreDecimalNumberBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreDecimalConfig<"string" | "number" | "bigint">, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/decimal.d.ts(58,22): error TS2515: Non-abstract class 'SingleStoreDecimalBigIntBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreDecimalConfig<"string" | "number" | "bigint">, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/double.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreDoubleBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreDoubleConfig, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/enum.d.ts(19,5): error TS2416: Property 'generatedAlwaysAs' in type 'SingleStoreEnumColumnBuilder<T>' is not assignable to the same property in base type 'SingleStoreColumnBuilder<T, { enumValues: T["enumValues"]; }, object, ColumnBuilderExtraConfig>'.
+  Type '(as: SQL<unknown> | (() => SQL<unknown>) | T["data"], config?: Partial<GeneratedColumnConfig<unknown>> | undefined) => HasGenerated<this, {}>' is not assignable to type '(as: SQL<unknown> | (() => SQL<unknown>) | T["data"], config?: Partial<GeneratedColumnConfig<unknown>> | undefined) => HasGenerated<this, { type: "always"; }>'.
+    Type 'HasGenerated<this, {}>' is not assignable to type 'HasGenerated<this, { type: "always"; }>'.
+      Type 'HasGenerated<this, {}>' is not assignable to type '{ _: { hasDefault: true; generated: { type: "always"; }; }; }'.
+        The types of '_.generated' are incompatible between these types.
+          Property 'type' is missing in type '{}' but required in type '{ type: "always"; }'.
+node_modules/drizzle-orm/singlestore-core/columns/float.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreFloatBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreFloatConfig, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/int.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreIntBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreIntConfig, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/json.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreJsonBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, object, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/mediumint.d.ts(15,22): error TS2515: Non-abstract class 'SingleStoreMediumIntBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreIntConfig, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/real.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreRealBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreRealConfig, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/serial.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreSerialBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/smallint.d.ts(15,22): error TS2515: Non-abstract class 'SingleStoreSmallIntBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreIntConfig, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/text.d.ts(16,22): error TS2515: Non-abstract class 'SingleStoreTextBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, { textType: SingleStoreTextColumnType; enumValues: T["enumValues"]; }, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/time.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreTimeBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, object, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/timestamp.d.ts(15,22): error TS2515: Non-abstract class 'SingleStoreTimestampBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreDateColumnBaseBuilder<T, SingleStoreTimestampConfig<"string" | "date">, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/timestamp.d.ts(35,22): error TS2515: Non-abstract class 'SingleStoreTimestampStringBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreDateColumnBaseBuilder<T, SingleStoreTimestampConfig<"string" | "date">, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/tinyint.d.ts(15,22): error TS2515: Non-abstract class 'SingleStoreTinyIntBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilderWithAutoIncrement<T, SingleStoreIntConfig, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/varbinary.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreVarBinaryBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, SingleStoreVarbinaryOptions, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/varchar.d.ts(16,22): error TS2515: Non-abstract class 'SingleStoreVarCharBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, SingleStoreVarCharConfig<T["enumValues"], T["length"]>, { length: T["length"]; }, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/vector.d.ts(13,22): error TS2515: Non-abstract class 'SingleStoreVectorBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, SingleStoreVectorConfig, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/columns/year.d.ts(14,22): error TS2515: Non-abstract class 'SingleStoreYearBuilder<T>' does not implement inherited abstract member generatedAlwaysAs from class 'SingleStoreColumnBuilder<T, object, object, ColumnBuilderExtraConfig>'.
+node_modules/drizzle-orm/singlestore-core/db.d.ts(1,38): error TS2307: Cannot find module 'mysql2/promise' or its corresponding type declarations.
+node_modules/drizzle-orm/singlestore-core/query-builders/delete.d.ts(36,22): error TS2420: Class 'SingleStoreDeleteBase<TTable, TQueryResult, TPreparedQueryHKT, TDynamic, TExcludedMethods>' incorrectly implements interface 'SQLWrapper'.
+  Property 'getSQL' is missing in type 'SingleStoreDeleteBase<TTable, TQueryResult, TPreparedQueryHKT, TDynamic, TExcludedMethods>' but required in type 'SQLWrapper'.
+node_modules/drizzle-orm/singlestore-core/query-builders/select.d.ts(268,262): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | ... 7 more ... | "minus"'.
+node_modules/drizzle-orm/singlestore-core/query-builders/select.d.ts(294,265): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | ... 7 more ... | "minus"'.
+node_modules/drizzle-orm/singlestore-core/query-builders/select.d.ts(320,266): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | ... 7 more ... | "minus"'.
+node_modules/drizzle-orm/singlestore-core/query-builders/select.d.ts(346,263): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | ... 7 more ... | "minus"'.
+node_modules/drizzle-orm/singlestore-core/query-builders/select.d.ts(370,262): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"session"' is not assignable to type '"offset" | "for" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | ... 7 more ... | "minus"'.
+node_modules/drizzle-orm/singlestore-core/query-builders/select.d.ts(520,22): error TS2515: Non-abstract class 'SingleStoreSelectBase<TTableName, TSelection, TSelectMode, TPreparedQueryHKT, TNullabilityMap, TDynamic, TExcludedMethods, TResult, TSelectedFields>' does not implement inherited abstract member getSQL from class 'SingleStoreSelectQueryBuilderBase<SingleStoreSelectHKT, TTableName, TSelection, TSelectMode, TPreparedQueryHKT, TNullabilityMap, TDynamic, TExcludedMethods, TResult, TSelectedFields>'.
+node_modules/drizzle-orm/singlestore-core/query-builders/select.types.d.ts(130,1185): error TS2344: Type 'SingleStoreSetOperatorExcludedMethods' does not satisfy the constraint '"offset" | "for" | "as" | "iterator" | "then" | "limit" | "union" | "catch" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "execute" | "leftJoin" | "rightJoin" | ... 14 more ... | "minus"'.
+  Type '"session"' is not assignable to type '"offset" | "for" | "as" | "iterator" | "then" | "limit" | "union" | "catch" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "execute" | "leftJoin" | "rightJoin" | ... 14 more ... | "minus"'.
+node_modules/drizzle-orm/singlestore/driver.d.ts(1,100): error TS2307: Cannot find module 'mysql2' or its corresponding type declarations.
+node_modules/drizzle-orm/singlestore/driver.d.ts(2,39): error TS2307: Cannot find module 'mysql2/promise' or its corresponding type declarations.
+node_modules/drizzle-orm/singlestore/session.d.ts(1,94): error TS2307: Cannot find module 'mysql2/promise' or its corresponding type declarations.
+node_modules/drizzle-orm/sqlite-core/query-builders/query.d.ts(25,22): error TS2420: Class 'SQLiteRelationalQuery<TType, TResult>' incorrectly implements interface 'SQLWrapper'.
+  Property 'getSQL' is missing in type 'SQLiteRelationalQuery<TType, TResult>' but required in type 'SQLWrapper'.
+node_modules/drizzle-orm/sqlite-core/query-builders/select.d.ts(233,247): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"config"' is not assignable to type '"offset" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | "having" | "groupBy" | "crossJoin" | "unionAll"'.
+node_modules/drizzle-orm/sqlite-core/query-builders/select.d.ts(259,250): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"config"' is not assignable to type '"offset" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | "having" | "groupBy" | "crossJoin" | "unionAll"'.
+node_modules/drizzle-orm/sqlite-core/query-builders/select.d.ts(285,251): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"config"' is not assignable to type '"offset" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | "having" | "groupBy" | "crossJoin" | "unionAll"'.
+node_modules/drizzle-orm/sqlite-core/query-builders/select.d.ts(311,248): error TS2344: Type 'string' does not satisfy the constraint 'keyof this & string'.
+  Type 'string' is not assignable to type 'keyof this & string'.
+    Type 'string' is not assignable to type 'keyof this'.
+      Type '"config"' is not assignable to type '"offset" | "as" | "limit" | "union" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "leftJoin" | "rightJoin" | "innerJoin" | "fullJoin" | "toSQL" | "$dynamic" | "having" | "groupBy" | "crossJoin" | "unionAll"'.
+node_modules/drizzle-orm/sqlite-core/query-builders/select.d.ts(452,22): error TS2515: Non-abstract class 'SQLiteSelectBase<TTableName, TResultType, TRunResult, TSelection, TSelectMode, TNullabilityMap, TDynamic, TExcludedMethods, TResult, TSelectedFields>' does not implement inherited abstract member getSQL from class 'SQLiteSelectQueryBuilderBase<SQLiteSelectHKT, TTableName, TResultType, TRunResult, TSelection, TSelectMode, TNullabilityMap, TDynamic, TExcludedMethods, TResult, TSelectedFields>'.
+node_modules/drizzle-orm/sqlite-core/query-builders/select.types.d.ts(123,1157): error TS2344: Type 'SQLiteSetOperatorExcludedMethods' does not satisfy the constraint '"values" | "all" | "offset" | "get" | "as" | "then" | "limit" | "run" | "union" | "catch" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "execute" | "leftJoin" | ... 11 more ... | "$withCache"'.
+  Type '"config"' is not assignable to type '"values" | "all" | "offset" | "get" | "as" | "then" | "limit" | "run" | "union" | "catch" | "_" | "getSQL" | "intersect" | "except" | "where" | "orderBy" | "execute" | "leftJoin" | ... 11 more ... | "$withCache"'.
+src/db/schema/relations.ts(78,24): error TS2339: Property 'userID' does not exist on type 'PgTableWithColumns<{ name: "teams"; schema: undefined; columns: { id: PgColumn<{ name: "id"; tableName: "teams"; dataType: "string"; columnType: "PgVarchar"; data: string; driverParam: string; notNull: true; hasDefault: false; ... 6 more ...; generated: undefined; }, {}, { ...; }>; ... 7 more ...; updatedAt: PgColum...'.
