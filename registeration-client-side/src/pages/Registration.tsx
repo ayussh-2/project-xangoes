@@ -27,7 +27,8 @@ export const RegistrationPage = () => {
 
             await new Promise((resolve) => setTimeout(resolve, 2000));
 
-            alert("Registration successful!");
+            alert("Registration successful! Proceeding to payment.");
+            navigate("/payment");
         } catch (error) {
             console.error("Registration failed:", error);
             alert("Registration failed. Please try again.");
