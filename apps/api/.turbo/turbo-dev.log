@@ -497,3 +497,14 @@ AsyncHandler Error: 39 |             )
 40 |             .limit(1)
 41 |             .execute();
 42 | 
+--> POST /api/user/register [31m500[0m 50ms
+43 |         if (existingUser.length > 0) {
+44 |             throw new Error("User with given email or mobile already exists.");
+                       ^
+error: User with given email or mobile already exists.
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:44:19)
+
+Started development server: http://localhost:5000
+<-- POST /api/user/register
+AsyncHandler Error: 39 |             )
+40 |             .limit(1)
