@@ -1,0 +1,48 @@
+$ bun run --hot src/index.ts
+1 | import * as admin from "firebase-admin";
+2 | 
+3 | import { env } from "./env";
+4 | 
+5 | if (!admin.apps.length) {
+               ^
+TypeError: undefined is not an object (evaluating 'admin.apps.length')
+      at D:\Projects\GDSC\project-xangoes\apps\api\src\config\firebase.ts:5:12
+2 | 
+3 | import { env } from "./env";
+4 | 
+5 | // Check if apps array exists and has length
+6 | if (!admin.apps || admin.apps.length === 0) {
+7 |     admin.initializeApp({
+              ^
+TypeError: admin.initializeApp is not a function. (In 'admin.initializeApp({
+    credential: admin.credential.cert({
+      projectId: env.firebase.FIREBASE_PROJECT_ID,
+      privateKey: env.firebase.FIREBASE_PRIVATE_KEY.replace(/\\n/g, `
+`),
+      clientEmail: env.firebase.FIREBASE_CLIENT_EMAIL
+    })
+  })', 'admin.initializeApp' is undefined)
+      at D:\Projects\GDSC\project-xangoes\apps\api\src\config\firebase.ts:7:11
+1 | (function (entry, fetcher)
+              ^
+SyntaxError: Export named 'firebaseAdmin' not found in module 'D:\Projects\GDSC\project-xangoes\apps\api\src\config\firebase.ts'.
+Started development server: http://localhost:5000
+<-- GET /api/
+--> GET /api/ [32m200[0m 4ms
+Global Error Handler: {
+  message: "Context is not finalized. Did you forget to return a Response object or `await next()`?",
+  stack: "Error: Context is not finalized. Did you forget to return a Response object or `await next()`?\n    at <anonymous> (D:\\Projects\\GDSC\\project-xangoes\\apps\\api\\node_modules\\hono\\dist\\hono-base.js:203:21)\n    at processTicksAndRejections (native:7:39)",
+  url: "http://localhost:5000/api/",
+  method: "GET",
+  timestamp: "2025-10-03T05:53:28.199Z",
+}
+Started development server: http://localhost:5000
+<-- GET /api/
+--> GET /api/ [32m200[0m 1ms
+Global Error Handler: {
+  message: "Context is not finalized. Did you forget to return a Response object or `await next()`?",
+  stack: "Error: Context is not finalized. Did you forget to return a Response object or `await next()`?\n    at <anonymous> (D:\\Projects\\GDSC\\project-xangoes\\apps\\api\\node_modules\\hono\\dist\\hono-base.js:203:21)\n    at processTicksAndRejections (native:7:39)",
+  url: "http://localhost:5000/api/",
+  method: "GET",
+  timestamp: "2025-10-03T05:53:48.720Z",
+}

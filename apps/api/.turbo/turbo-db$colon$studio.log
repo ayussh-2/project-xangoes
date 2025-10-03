@@ -1,0 +1,6 @@
+$ bunx drizzle-kit studio
+No config path provided, using default 'drizzle.config.ts'
+Reading config file 'D:\Projects\GDSC\project-xangoes\apps\api\drizzle.config.ts'
+[dotenv@17.2.0] injecting env (0) from .env (tip: ⚙️  enable debug logging with { debug: true })
+Using 'pg' driver for database querying
+

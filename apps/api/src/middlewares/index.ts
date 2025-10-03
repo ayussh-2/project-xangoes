@@ -1,11 +1,12 @@
-export { asyncHandler, createError, CustomError } from './asyncHandler';
+export { asyncHandler, createError, CustomError } from "./asyncHandler";
 export {
-  ResponseHandler,
-  sendCreated,
-  sendError,
-  sendNoContent,
-  sendPaginated,
-  sendSuccess,
-} from './responseHandler';
-export { errorHandler, notFoundHandler } from './errorHandler';
-export { validateRequest } from './schemaValidator';
+    ResponseHandler,
+    sendCreated,
+    sendError,
+    sendNoContent,
+    sendPaginated,
+    sendSuccess,
+} from "./responseHandler";
+export { errorHandler, notFoundHandler } from "./errorHandler";
+export { validateRequest } from "./schemaValidator";
+export { authenticate, type AuthenticatedContext } from "./auth";

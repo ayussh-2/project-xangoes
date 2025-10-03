@@ -37,6 +37,13 @@ export const env: EnvConfig = {
     // Rate Limiting Configuration
     RATE_LIMIT: parseEnv(process.env.RATE_LIMIT, 100, parseInt),
     RATE_LIMIT_WINDOW: parseEnv(process.env.RATE_LIMIT_WINDOW, 60, parseInt),
+
+    // Firebase Configuration
+    firebase: {
+        FIREBASE_PROJECT_ID: requireEnv("FIREBASE_PROJECT_ID"),
+        FIREBASE_PRIVATE_KEY: requireEnv("FIREBASE_PRIVATE_KEY"),
+        FIREBASE_CLIENT_EMAIL: requireEnv("FIREBASE_CLIENT_EMAIL"),
+    },
 };
 
 // Validation function for critical environment variables
