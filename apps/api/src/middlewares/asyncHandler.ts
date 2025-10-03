@@ -1,6 +1,6 @@
-import { Context } from 'hono';
+import { Context } from "hono";
 
-import { ApiResponse } from '@/types';
+import { ApiResponse } from "@/types";
 
 /**
  * Async handler wrapper to eliminate try-catch blocks in route handlers
@@ -11,6 +11,7 @@ export const asyncHandler = (fn: (c: Context) => Promise<Response | void>) => {
     return async (c: Context): Promise<Response> => {
         try {
             const result = await fn(c);
+
             return (
                 result ||
                 c.json({ success: false, message: "No response" }, 500)
@@ -46,15 +47,14 @@ export const asyncHandler = (fn: (c: Context) => Promise<Response | void>) => {
 
             // Handle generic errors
             const errorMessage =
-                error instanceof Error ? error.message : "Unknown error";
+                error instanceof Error
+                    ? error.message || error
+                    : "Unknown error";
             return c.json(
                 {
                     success: false,
                     message: "Internal server error",
-                    error:
-                        process.env.NODE_ENV === "development"
-                            ? errorMessage
-                            : "Something went wrong",
+                    error: errorMessage,
                     timestamp: new Date().toISOString(),
                 } as ApiResponse,
                 500

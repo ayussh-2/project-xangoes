@@ -11,8 +11,11 @@
         "lint": "turbo lint",
         "test": "turbo test",
         "run-api": "turbo dev --filter=api",
+        "run-web": "turbo dev --filter=web",
+        "run-auth-client": "turbo dev --filter=auth-client",
         "db:studio": "turbo db:studio --filter=api",
-        "db:generate": "turbo db:generate --filter=api"
+        "db:generate": "turbo db:generate --filter=api",
+        "db:migrate": "turbo db:migrate --filter=api"
     },
     "devDependencies": {
         "turbo": "^2.0.0"

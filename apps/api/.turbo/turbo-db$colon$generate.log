@@ -1,0 +1,15 @@
+$ bunx drizzle-kit generate
+No config path provided, using default 'drizzle.config.ts'
+Reading config file 'D:\Projects\GDSC\project-xangoes\apps\api\drizzle.config.ts'
+[dotenv@17.2.0] injecting env (0) from .env (tip: ⚙️  write to custom object with { processEnv: myObject })
+8 tables
+users 20 columns 0 indexes 0 fks
+fests 13 columns 0 indexes 0 fks
+clubs 8 columns 0 indexes 0 fks
+events 20 columns 0 indexes 0 fks
+institutes 8 columns 0 indexes 0 fks
+transactions 12 columns 0 indexes 0 fks
+event_registrations 6 columns 0 indexes 0 fks
+teams 9 columns 0 indexes 0 fks
+
+No schema changes, nothing to migrate 😴

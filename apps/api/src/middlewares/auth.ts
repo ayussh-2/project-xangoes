@@ -9,8 +9,6 @@ export interface AuthenticatedContext extends Context {
         emailVerified?: boolean;
         displayName?: string;
         photoURL?: string;
-        phoneNumber?: string;
-        customClaims?: Record<string, any>;
     };
 }
 

@@ -4,18 +4,21 @@ import {
     pgTable,
     text,
     timestamp,
+    uuid,
     varchar,
 } from "drizzle-orm/pg-core";
 
 export const genderEnum = pgEnum("gender", ["MALE", "FEMALE", "OTHERS"]);
 
 export const users = pgTable("users", {
-    id: varchar("id", { length: 255 }).primaryKey(),
+    id: uuid("id")
+        .primaryKey()
+        .$defaultFn(() => crypto.randomUUID()),
     email: varchar("email", { length: 255 }).notNull().unique(),
     name: varchar("name", { length: 255 }),
     photo: text("photo"),
     gender: genderEnum("gender"),
-    dob: timestamp("dob"),
+    dob: varchar("dob", { length: 10 }), // YYYY-MM-DD
     state: varchar("state", { length: 100 }), // lowercase
     city: varchar("city", { length: 100 }), // lowercase
     college: varchar("college", { length: 255 }), // References institute.id

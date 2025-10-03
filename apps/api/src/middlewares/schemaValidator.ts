@@ -6,16 +6,10 @@
  * Automatically formats validation errors for consistent API responses.
  */
 
-import {
-  Context,
-  Next,
-} from 'hono';
-import {
-  ZodError,
-  ZodTypeAny,
-} from 'zod';
+import { Context, Next } from "hono";
+import { ZodError, ZodTypeAny } from "zod";
 
-import { sendError } from './responseHandler.js';
+import { sendError } from "./responseHandler.js";
 
 /**
  * Supported request targets for validation
@@ -84,7 +78,9 @@ export const validateRequest = (
                     field: issue.path.join("."),
                     message: issue.message,
                 }));
-                return sendError(c, "Validation failed", 400, errors);
+                const failedFields = errors.map((err) => err.field).join(", ");
+                const message = `Validation failed for the following fields: ${failedFields}. Please check your input and try again.`;
+                return sendError(c, message, 400, errors);
             }
             // Handle unexpected errors
             return sendError(c, "Internal server error", 500);

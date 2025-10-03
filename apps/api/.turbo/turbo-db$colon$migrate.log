@@ -1,0 +1,43 @@
+$ bunx drizzle-kit migrate
+No config path provided, using default 'drizzle.config.ts'
+Reading config file 'D:\Projects\GDSC\project-xangoes\apps\api\drizzle.config.ts'
+[dotenv@17.2.0] injecting env (0) from .env (tip: ⚙️  override existing env vars with { override: true })
+Using 'pg' driver for database querying
+DrizzleQueryError: Failed query: ALTER TABLE "users" ALTER COLUMN "id" SET DATA TYPE uuid;
+params: 
+    at NodePgPreparedQuery.queryWithCache (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\pg-core\session.ts:74:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\pg-core\dialect.ts:102:7)
+    ... 2 lines matching cause stack trace ...
+    at async migrate (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\node-postgres\migrator.ts:10:2) {
+  query: 'ALTER TABLE "users" ALTER COLUMN "id" SET DATA TYPE uuid;',
+  params: [],
+  cause: error: column "id" cannot be cast automatically to type uuid
+      at D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg\lib\client.js:545:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\node-postgres\session.ts:149:14)
+      at async NodePgPreparedQuery.queryWithCache (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\pg-core\session.ts:72:12)
+      at async <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\pg-core\dialect.ts:102:7)
+      at async NodePgSession.transaction (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\node-postgres\session.ts:258:19)
+      at async PgDialect.migrate (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\pg-core\dialect.ts:95:3)
+      at async migrate (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\src\node-postgres\migrator.ts:10:2) {
+    length: 169,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING id::uuid".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12932',
+    routine: 'ATPrepAlterColumnType'
+  }
+}
+error: script "db:migrate" exited with code 1

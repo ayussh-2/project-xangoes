@@ -32,7 +32,9 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 
 interface RegistrationFormProps {
-    onSubmit: (data: RegistrationFormData & { photo: string }) => void;
+    onSubmit: (
+        data: RegistrationFormData & { photo: string; idCard: File }
+    ) => void;
     loading?: boolean;
 }
 
@@ -59,10 +61,11 @@ export const RegistrationForm = ({
     });
 
     const handleSubmit = (data: RegistrationFormData) => {
-        // Include photo URL from Google auth
+        // Include photo URL from Google auth and idCard file
         const submissionData = {
             ...data,
             photo: user?.photoURL || "",
+            idCard: data.idCard,
         };
         onSubmit(submissionData);
     };
@@ -137,13 +140,13 @@ export const RegistrationForm = ({
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                <SelectItem value="male">
+                                                <SelectItem value="MALE">
                                                     Male
                                                 </SelectItem>
-                                                <SelectItem value="female">
+                                                <SelectItem value="FEMALE">
                                                     Female
                                                 </SelectItem>
-                                                <SelectItem value="other">
+                                                <SelectItem value="OTHER">
                                                     Other
                                                 </SelectItem>
                                             </SelectContent>

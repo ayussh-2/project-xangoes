@@ -3,7 +3,6 @@ import { getAuth } from "firebase-admin/auth";
 
 import { env } from "./env";
 
-// Initialize Firebase Admin if not already initialized
 if (getApps().length === 0) {
     initializeApp({
         credential: cert({
@@ -14,5 +13,4 @@ if (getApps().length === 0) {
     });
 }
 
-// Export auth instance for token verification
 export const auth = getAuth();

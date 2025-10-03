@@ -1,4 +1,5 @@
-export type { EnvConfig } from './env.types';
+export type { EnvConfig } from "./env.types";
+export type { User } from "./user";
 
 // API Response Types
 export interface ApiResponse<T = any> {

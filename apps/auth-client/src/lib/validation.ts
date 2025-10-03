@@ -3,7 +3,7 @@ import { z } from "zod";
 export const registrationSchema = z.object({
     email: z.string().email("Invalid email address"),
     name: z.string().min(2, "Name must be at least 2 characters"),
-    gender: z.enum(["male", "female", "other"]).refine((val) => val, {
+    gender: z.enum(["MALE", "FEMALE", "OTHER"]).refine((val) => val, {
         message: "Please select a gender",
     }),
     dob: z.string().refine((date) => {
@@ -25,7 +25,11 @@ export const registrationSchema = z.object({
                 ),
             { message: "Only JPEG, PNG, and WebP images are allowed" }
         ),
-    mobile: z.string().regex(/^\+?[1-9]\d{1,14}$/, "Invalid mobile number"),
+    mobile: z
+        .string()
+        .min(10, "Mobile number must be exactly 10 digits")
+        .max(10, "Mobile number must be exactly 10 digits")
+        .regex(/^\d{10}$/, "Invalid mobile number"),
     rollNumber: z.string().min(1, "Roll number is required"),
 });
 
