@@ -4,6 +4,7 @@ import { db } from "@/db/schema";
 import { User } from "@/types";
 
 import { users } from "../db/schema/user";
+import { throwApiError } from "../middlewares/asyncHandler";
 
 /**
  * @description USER service to manage user-related operations
@@ -41,7 +42,10 @@ class UserService {
             .execute();
 
         if (existingUser.length > 0) {
-            throw new Error("User with given email or mobile already exists.");
+            throwApiError(
+                "User with given email, mobile, or Firebase ID already exists.",
+                409
+            );
         }
 
         const newUser = await db

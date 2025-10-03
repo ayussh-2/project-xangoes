@@ -53,7 +53,7 @@ export const asyncHandler = (fn: (c: Context) => Promise<Response | void>) => {
             return c.json(
                 {
                     success: false,
-                    message: "Internal server error",
+                    message: errorMessage,
                     error: errorMessage,
                     timestamp: new Date().toISOString(),
                 } as ApiResponse,
@@ -78,6 +78,21 @@ export class CustomError extends Error {
         Error.captureStackTrace(this, this.constructor);
     }
 }
+
+/**
+ * Throws a custom API error with the specified message and status code.
+ * This will be caught by asyncHandler and returned as a structured response.
+ * @param message - The error message to display
+ * @param statusCode - The HTTP status code (default: 500)
+ * @param details - Optional additional error details
+ */
+export const throwApiError = (
+    message: string,
+    statusCode: number = 500,
+    details?: any
+): never => {
+    throw new CustomError(message, statusCode, details);
+};
 
 /**
  * Common error constructors for convenience
