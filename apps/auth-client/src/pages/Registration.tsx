@@ -2,6 +2,7 @@ import { useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import { LoginForm } from "@/components/LoginForm";
 import { RegistrationForm } from "@/components/RegistrationForm";
 import useAPI from "@/hooks/useAPI";
 import { useAuth } from "@/hooks/useAuth";
@@ -15,7 +16,7 @@ interface RegistrationResponse {
 }
 
 export const RegistrationPage = () => {
-    const { isAuthenticated, user, loading } = useAuth();
+    const { isAuthenticated, user, loading, isAlreadyRegistered } = useAuth();
     const {
         data,
         error,
@@ -25,10 +26,10 @@ export const RegistrationPage = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (!isAuthenticated && !loading) {
-            navigate("/login");
+        if (isAlreadyRegistered) {
+            navigate("/profile");
         }
-    }, [isAuthenticated]);
+    }, [isAlreadyRegistered, navigate]);
 
     const handleRegistrationSubmit = async (
         formData: RegistrationFormData & { photo: string; idCard: File }
@@ -64,8 +65,12 @@ export const RegistrationPage = () => {
         }
     };
 
-    if (!isAuthenticated) {
-        return null;
+    if (!isAuthenticated && !loading) {
+        return (
+            <div className="w-[80dvw] h-screen flex items-center justify-center">
+                <LoginForm />
+            </div>
+        );
     }
 
     return (

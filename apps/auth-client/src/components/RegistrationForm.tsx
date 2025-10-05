@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
@@ -60,6 +62,12 @@ export const RegistrationForm = ({
         },
     });
 
+    useEffect(() => {
+        if (user?.email) {
+            form.setValue("email", user.email);
+        }
+    }, [user?.email, form]);
+
     const handleSubmit = (data: RegistrationFormData) => {
         // Include photo URL from Google auth and idCard file
         const submissionData = {
@@ -97,6 +105,7 @@ export const RegistrationForm = ({
                                         <FormControl>
                                             <Input
                                                 placeholder="your.email@example.com"
+                                                disabled
                                                 {...field}
                                             />
                                         </FormControl>
@@ -134,8 +143,8 @@ export const RegistrationForm = ({
                                             onValueChange={field.onChange}
                                             defaultValue={field.value}
                                         >
-                                            <FormControl>
-                                                <SelectTrigger className="!bg-white">
+                                            <FormControl className="w-full">
+                                                <SelectTrigger>
                                                     <SelectValue placeholder="Select gender" />
                                                 </SelectTrigger>
                                             </FormControl>

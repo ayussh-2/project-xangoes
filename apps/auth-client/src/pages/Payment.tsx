@@ -155,7 +155,7 @@ export const PaymentPage = () => {
                                         : "outline"
                                 }
                                 onClick={() => setPaymentMethod("gateway")}
-                                className="flex-1 !text-white"
+                                className="flex-1"
                             >
                                 Payment Gateway
                             </Button>
@@ -166,7 +166,7 @@ export const PaymentPage = () => {
                                         : "outline"
                                 }
                                 onClick={() => setPaymentMethod("manual")}
-                                className="flex-1 !text-white"
+                                className="flex-1"
                             >
                                 Manual Payment
                             </Button>

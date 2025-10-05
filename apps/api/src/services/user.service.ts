@@ -48,15 +48,58 @@ class UserService {
             );
         }
 
-        const newUser = await db
+        const [newUser] = await db
             .insert(users)
             .values({ ...userData })
             .returning();
-        return {
-            status: "ok",
-            message: "User registered successfully!",
-            data: newUser,
-        };
+
+        return newUser;
+    }
+
+    /**
+     * @description Get user by User ID
+     * @param {string} userId - The User ID
+     * @returns {object} - The user object
+     */
+    public async getUserByUserID(userId: string) {
+        const user = await db
+            .select()
+            .from(users)
+            .where(eq(users.id, userId))
+            .limit(1)
+            .execute();
+        if (user.length === 0) {
+            throwApiError("User not found", 404);
+        }
+        return user[0];
+    }
+
+    private async findUserByFirebaseId(firebaseId: string) {
+        const user = await db
+            .select()
+            .from(users)
+            .where(eq(users.firebaseId, firebaseId))
+            .limit(1)
+            .execute();
+        if (user.length === 0) {
+            throwApiError("User not found", 404);
+        }
+        return user[0];
+    }
+
+    public async me(firebaseId: string) {
+        return this.findUserByFirebaseId(firebaseId);
+    }
+
+    public async updateUser(firebaseId: string, userData: Partial<User>) {
+        const user = await this.findUserByFirebaseId(firebaseId);
+        const updatedUser = { ...user, ...userData };
+        await db
+            .update(users)
+            .set(updatedUser)
+            .where(eq(users.id, user.id))
+            .execute();
+        return updatedUser;
     }
 }
 

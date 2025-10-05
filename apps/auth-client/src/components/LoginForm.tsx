@@ -33,7 +33,7 @@ export const LoginForm = () => {
 
     if (isAuthenticated) {
         return (
-            <Card className="w-full max-w-md mx-auto">
+            <Card className="w-full max-w-lg mx-auto">
                 <CardContent className="pt-6">
                     <div className="text-center">
                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
@@ -47,7 +47,7 @@ export const LoginForm = () => {
     }
 
     return (
-        <Card className="w-full max-w-md mx-auto">
+        <Card className="w-full max-w-lg mx-auto">
             <CardHeader>
                 <CardTitle className="text-2xl font-semibold tracking-tight">
                     Login

@@ -1,22 +1,115 @@
 $ bun run --hot src/index.ts
 Started development server: http://localhost:5000
+Started development server: http://localhost:5000
 <-- POST /api/user/register
+--> POST /api/user/register [32m200[0m 295ms
+61 |     }
+         ^
+error: Unexpected }
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:61:5
+60 |     }
+         ^
+error: Unexpected }
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:60:5
+Started development server: http://localhost:5000
+<-- POST /api/user/register
+AsyncHandler Error: 89 | export const throwApiError = (
+90 |     message: string,
+91 |     statusCode: number = 500,
+92 |     details?: any
+--> POST /api/user/register [33m409[0m 55ms
+93 | ): never => {
+94 |     throw new CustomError(message, statusCode, details);
+               ^
+CustomError: User with given email, mobile, or Firebase ID already exists.
+ statusCode: 409,
+    details: undefined,
+
+      at throwApiError (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\asyncHandler.ts:94:11)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:45:13)
+
+<-- POST /api/user/register
+AsyncHandler Error: 89 | export const throwApiError = (
+--> POST /api/user/register [33m409[0m 18ms
+90 |     message: string,
+91 |     statusCode: number = 500,
+92 |     details?: any
+93 | ): never => {
+94 |     throw new CustomError(message, statusCode, details);
+               ^
+CustomError: User with given email, mobile, or Firebase ID already exists.
+ statusCode: 409,
+    details: undefined,
+
+      at throwApiError (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\asyncHandler.ts:94:11)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:45:13)
+
+<-- POST /api/user/register
+--> POST /api/user/register [33m400[0m 17ms
+<-- POST /api/user/register
+--> POST /api/user/register [32m200[0m 75ms
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+17 |         const userId = c.req.header("x-user-id");
+                   ^
+error: "userId" has already been declared
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\controllers\users.ts:17:15
+
+16 |         const userId = c.req.header("x-user-id");
+                   ^
+note: "userId" was originally declared here
+   at D:\Projects\GDSC\project-xangoes\apps\api\src\controllers\users.ts:16:15
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+<-- POST /graphql
+--> POST /graphql [33m404[0m 24ms
+<-- POST /api/auth/register
+--> POST /api/auth/register [33m404[0m 25ms
+<-- POST /api/users/register
+--> POST /api/users/register [33m404[0m 7ms
+<-- POST /api/user/register
+--> POST /api/user/register [32m200[0m 491ms
+<-- POST /api/user/register
+--> POST /api/user/register [33m409[0m 117ms
+AsyncHandler Error: 89 | export const throwApiError = (
+90 |     message: string,
+91 |     statusCode: number = 500,
+92 |     details?: any
+93 | ): never => {
+94 |     throw new CustomError(message, statusCode, details);
+               ^
+CustomError: User with given email, mobile, or Firebase ID already exists.
+ statusCode: 409,
+    details: undefined,
+
+      at throwApiError (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\asyncHandler.ts:94:11)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:45:13)
+
+<-- POST /api/user/register
+--> POST /api/user/register [32m200[0m 134ms
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00bc
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00bc [32m200[0m 93ms
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00b
 AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
 38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
 39 |       try {
 40 |         return await query();
 41 |       } catch (e) {
 42 |         throw new DrizzleQueryError(queryString, params, e);
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00b [31m500[0m 122ms
                    ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
---> POST /api/user/register [31m500[0m 170ms
+error: Failed query: select "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at" from "users" where "users"."id" = $1 limit $2
+params: 76eb0e83-2348-46c2-ab4b-7d671b4a00b,1
+  query: "select \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\" from \"users\" where \"users\".\"id\" = $1 limit $2",
  params: [
-  "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
+  "76eb0e83-2348-46c2-ab4b-7d671b4a00b", 1
 ],
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
@@ -28,42 +121,49 @@ params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/
 44 |     // application that created the query
 45 |     Error.captureStackTrace(err)
                ^
-error: null value in column "id" of relation "users" violates not-null constraint
-     length: 585,
+error: invalid input syntax for type uuid: "76eb0e83-2348-46c2-ab4b-7d671b4a00b"
+     length: 167,
    severity: "ERROR",
-     detail: "Failing row contains (null, hapati@mailinator.com, Walter Gibson, https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8n..., MALE, 2020-12-23 00:00:00, Labore rerum reicien, Vero anim eos ad ten, Cumque eaque at non , http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/nol..., 1234567890, null, 182, f, null, null, null, 2025-10-03 07:17:27.752054, 2025-10-03 07:17:27.752054, BrWpMCDo3fgAzxgmvKYowfkM9RA3).",
+     detail: undefined,
        hint: undefined,
    position: undefined,
  internalPosition: undefined,
  internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
+      where: "unnamed portal parameter $1 = '...'",
+     schema: undefined,
+      table: undefined,
    dataType: undefined,
  constraint: undefined,
-       file: "execMain.c",
-    routine: "ExecConstraints",
-       code: "23502"
+       file: "uuid.c",
+    routine: "string_to_uuid",
+       code: "22P02"
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
 
-<-- POST /api/user/register
+Started development server: http://localhost:5000
+15 | 
+16 | userRouter.get("/me", authenticate, asyncHandler(me));
+17 | userRouter.get(
+18 |     "/:userId",
+19 |     asyncHandler(getUserByUserID),
+20 |     validateRequest(getUserByUserIDSchema, "params")
+                         ^
+ReferenceError: Can't find variable: getUserByUserIDSchema
+      at D:\Projects\GDSC\project-xangoes\apps\api\src\routes\user.ts:20:21
+Started development server: http://localhost:5000
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00b
 AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
 38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
---> POST /api/user/register [31m500[0m 77ms
 39 |       try {
 40 |         return await query();
 41 |       } catch (e) {
 42 |         throw new DrizzleQueryError(queryString, params, e);
                    ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
+error: Failed query: select "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at" from "users" where "users"."id" = $1 limit $2
+params: 76eb0e83-2348-46c2-ab4b-7d671b4a00b,1
+  query: "select \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\" from \"users\" where \"users\".\"id\" = $1 limit $2",
  params: [
-  "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
+  "76eb0e83-2348-46c2-ab4b-7d671b4a00b", 1
 ],
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
@@ -72,45 +172,44 @@ params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/
 41 |     rej = reject
 42 |   }).catch((err) => {
 43 |     // replace the stack trace that leads to `TCP.onStreamRead` with one that leads back to the
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00b [31m500[0m 182ms
 44 |     // application that created the query
 45 |     Error.captureStackTrace(err)
                ^
-error: null value in column "id" of relation "users" violates not-null constraint
-     length: 585,
+error: invalid input syntax for type uuid: "76eb0e83-2348-46c2-ab4b-7d671b4a00b"
+     length: 167,
    severity: "ERROR",
-     detail: "Failing row contains (null, hapati@mailinator.com, Walter Gibson, https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8n..., MALE, 2020-12-23 00:00:00, Labore rerum reicien, Vero anim eos ad ten, Cumque eaque at non , http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/nol..., 1234567890, null, 182, f, null, null, null, 2025-10-03 07:18:13.611044, 2025-10-03 07:18:13.611044, BrWpMCDo3fgAzxgmvKYowfkM9RA3).",
+     detail: undefined,
        hint: undefined,
    position: undefined,
  internalPosition: undefined,
  internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
+      where: "unnamed portal parameter $1 = '...'",
+     schema: undefined,
+      table: undefined,
    dataType: undefined,
  constraint: undefined,
-       file: "execMain.c",
-    routine: "ExecConstraints",
-       code: "23502"
+       file: "uuid.c",
+    routine: "string_to_uuid",
+       code: "22P02"
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
 
-<-- POST /api/user/register
+Started development server: http://localhost:5000
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00b
 AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
 38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00b [31m500[0m 98ms
 39 |       try {
 40 |         return await query();
 41 |       } catch (e) {
---> POST /api/user/register [31m500[0m 46ms
 42 |         throw new DrizzleQueryError(queryString, params, e);
                    ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
+error: Failed query: select "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at" from "users" where "users"."id" = $1 limit $2
+params: 76eb0e83-2348-46c2-ab4b-7d671b4a00b,1
+  query: "select \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\" from \"users\" where \"users\".\"id\" = $1 limit $2",
  params: [
-  "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
+  "76eb0e83-2348-46c2-ab4b-7d671b4a00b", 1
 ],
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
@@ -122,44 +221,124 @@ params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/
 44 |     // application that created the query
 45 |     Error.captureStackTrace(err)
                ^
-error: null value in column "id" of relation "users" violates not-null constraint
-     length: 585,
+error: invalid input syntax for type uuid: "76eb0e83-2348-46c2-ab4b-7d671b4a00b"
+     length: 167,
    severity: "ERROR",
-     detail: "Failing row contains (null, hapati@mailinator.com, Walter Gibson, https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8n..., MALE, 2020-12-23 00:00:00, Labore rerum reicien, Vero anim eos ad ten, Cumque eaque at non , http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/nol..., 1234567890, null, 182, f, null, null, null, 2025-10-03 07:18:36.669706, 2025-10-03 07:18:36.669706, BrWpMCDo3fgAzxgmvKYowfkM9RA3).",
+     detail: undefined,
        hint: undefined,
    position: undefined,
  internalPosition: undefined,
  internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
+      where: "unnamed portal parameter $1 = '...'",
+     schema: undefined,
+      table: undefined,
    dataType: undefined,
  constraint: undefined,
-       file: "execMain.c",
-    routine: "ExecConstraints",
-       code: "23502"
+       file: "uuid.c",
+    routine: "string_to_uuid",
+       code: "22P02"
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
 
 Started development server: http://localhost:5000
 Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00b
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00b [33m400[0m 11ms
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00bd
+AsyncHandler Error: 89 | export const throwApiError = (
+90 |     message: string,
+91 |     statusCode: number = 500,
+92 |     details?: any
+93 | ): never => {
+94 |     throw new CustomError(message, statusCode, details);
+               ^
+CustomError: User not found
+ statusCode: 404,
+    details: undefined,
+
+      at throwApiError (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\asyncHandler.ts:94:11)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:72:13)
+
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00bd [33m404[0m 158ms
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00 [33m400[0m 18ms
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4abc
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4abc [33m400[0m 1ms
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00bc
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00bc [32m200[0m 104ms
+Started development server: http://localhost:5000
+<-- OPTIONS /api/user/register
+--> OPTIONS /api/user/register [32m204[0m 10ms
 <-- POST /api/user/register
+AsyncHandler Error: 89 | export const throwApiError = (
+90 |     message: string,
+91 |     statusCode: number = 500,
+92 |     details?: any
+93 | ): never => {
+94 |     throw new CustomError(message, statusCode, details);
+               ^
+--> POST /api/user/register [33m409[0m 283ms
+CustomError: User with given email, mobile, or Firebase ID already exists.
+ statusCode: 409,
+    details: undefined,
+
+      at throwApiError (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\asyncHandler.ts:94:11)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:45:13)
+
+<-- GET /api/user/me
+User ID from token: undefined
+--> GET /api/user/me [33m400[0m 447ms
+Started development server: http://localhost:5000
+<-- GET /api/user/me
+User ID from token: HonoRequest {
+  raw: Request (0 KB) {
+    method: "GET",
+    url: "http://localhost:5000/api/user/me",
+    headers: Headers {
+      "authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImU4MWYwNTJhZWYwNDBhOTdjMzlkMjY1MzgxZGU2Y2I0MzRiYzM1ZjMiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQXl1c2ggU2hhcm1hIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0otU0lVLUIxRXprMkVYMUt3V1lmOG5PZFBMLUFTc2dPcS12dmczTi1WU19xNEJGOUZnPXM5Ni1jIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL2VjaG9uZXN0LTY5NjkiLCJhdWQiOiJlY2hvbmVzdC02OTY5IiwiYXV0aF90aW1lIjoxNzU5Mzg4NjEwLCJ1c2VyX2lkIjoiQnJXcE1DRG8zZmdBenhnbXZLWW93ZmtNOVJBMyIsInN1YiI6IkJyV3BNQ0RvM2ZnQXp4Z212S1lvd2ZrTTlSQTMiLCJpYXQiOjE3NTk2NDE3MDQsImV4cCI6MTc1OTY0NTMwNCwiZW1haWwiOiJhendlZHMxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDkzMzMwMTY4ODM4NTI2OTgyNzgiXSwiZW1haWwiOlsiYXp3ZWRzMTIzQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.HaOwm0-BRzx36dsnk39lWkcjein8B9RHRP5MIE6ZQdcWU_DNecm6h79md_sI9y0liSHRs4TsbfwpcIrNcuAdRSbfy9Bkma5skV3VhRkDphiYPwGbvkILMn23mwS5xNcoo30xwEkQhYYEDev6cJ-e3zNzHJBaQMu3qQ3EgaEvVvxjvOIbdtr2p3ftCqTGxqQj7v3jNXbJAVb7rUpuSl1skBttrj92mWuDtwsGlFyp2oXod6x1vWgPVovakgyx8ANjBH5wk-kwmK8hBi5Ndou7hN-9cLntR0XyGQuhga2umheaJ9T1Qtb8wgV3S9Lk0aZ78vecXDZBwZmbGT9XyBI_Zw",
+      "user-agent": "PostmanRuntime/7.45.0",
+      "accept": "*/*",
+      "cache-control": "no-cache",
+      "host": "localhost:5000",
+      "accept-encoding": "gzip, deflate, br",
+      "connection": "keep-alive",
+      "postman-token": "f6641d92-6602-43c5-a541-15ba1d965226",
+    }
+  },
+  routeIndex: 4,
+  path: "/api/user/me",
+  bodyCache: {},
+  param: [Function: param],
+  query: [Function: query],
+  queries: [Function: queries],
+  header: [Function: header],
+  parseBody: [AsyncFunction: parseBody],
+  json: [Function: json],
+  text: [Function: text],
+  arrayBuffer: [Function: arrayBuffer],
+  blob: [Function: blob],
+  formData: [Function: formData],
+  addValidatedData: [Function: addValidatedData],
+  valid: [Function: valid],
+  url: [Getter],
+  method: [Getter],
+  matchedRoutes: [Getter],
+  routePath: [Getter],
+}
 AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
+--> GET /api/user/me [31m500[0m 326ms
 38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
---> POST /api/user/register [31m500[0m 78ms
 39 |       try {
 40 |         return await query();
 41 |       } catch (e) {
 42 |         throw new DrizzleQueryError(queryString, params, e);
                    ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
+error: Failed query: select "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at" from "users" where "users"."id" = $1 limit $2
+params: [object Object],1
+  query: "select \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\" from \"users\" where \"users\".\"id\" = $1 limit $2",
  params: [
-  "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
+  [Object ...], 1
 ],
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
@@ -171,45 +350,46 @@ params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/
 44 |     // application that created the query
 45 |     Error.captureStackTrace(err)
                ^
-error: null value in column "id" of relation "users" violates not-null constraint
-     length: 583,
+error: invalid input syntax for type uuid: "{"raw":{},"routeIndex":4,"path":"/api/user/me","bodyCache":{}}"
+     length: 194,
    severity: "ERROR",
-     detail: "Failing row contains (null, hapati@mailinator.com, Walter Gibson, https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8n..., MALE, 2020-12-23 00:00:00, Labore rerum reicien, Vero anim eos ad ten, Cumque eaque at non , http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/nol..., 1234567890, null, 182, f, null, null, null, 2025-10-03 07:22:15.12269, 2025-10-03 07:22:15.12269, BrWpMCDo3fgAzxgmvKYowfkM9RA3).",
+     detail: undefined,
        hint: undefined,
    position: undefined,
  internalPosition: undefined,
  internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
+      where: "unnamed portal parameter $1 = '...'",
+     schema: undefined,
+      table: undefined,
    dataType: undefined,
  constraint: undefined,
-       file: "execMain.c",
-    routine: "ExecConstraints",
-       code: "23502"
+       file: "uuid.c",
+    routine: "string_to_uuid",
+       code: "22P02"
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
 
-<-- POST /api/user/register
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+<-- GET /api/user/me
+User ID from token: BrWpMCDo3fgAzxgmvKYowfkM9RA3
 AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
 38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
---> POST /api/user/register [31m500[0m 63ms
 39 |       try {
 40 |         return await query();
 41 |       } catch (e) {
 42 |         throw new DrizzleQueryError(queryString, params, e);
                    ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
+error: Failed query: select "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at" from "users" where "users"."id" = $1 limit $2
+params: BrWpMCDo3fgAzxgmvKYowfkM9RA3,1
+  query: "select \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\" from \"users\" where \"users\".\"id\" = $1 limit $2",
  params: [
-  "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
+  "BrWpMCDo3fgAzxgmvKYowfkM9RA3", 1
 ],
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
+--> GET /api/user/me [31m500[0m 362ms
 
 40 |     res = resolve
 41 |     rej = reject
@@ -218,293 +398,147 @@ params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/
 44 |     // application that created the query
 45 |     Error.captureStackTrace(err)
                ^
-error: null value in column "id" of relation "users" violates not-null constraint
-     length: 585,
+error: invalid input syntax for type uuid: "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
+     length: 160,
    severity: "ERROR",
-     detail: "Failing row contains (null, hapati@mailinator.com, Walter Gibson, https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8n..., MALE, 2020-12-23 00:00:00, Labore rerum reicien, Vero anim eos ad ten, Cumque eaque at non , http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/nol..., 1234567890, null, 182, f, null, null, null, 2025-10-03 07:22:36.073132, 2025-10-03 07:22:36.073132, BrWpMCDo3fgAzxgmvKYowfkM9RA3).",
+     detail: undefined,
        hint: undefined,
    position: undefined,
  internalPosition: undefined,
  internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
+      where: "unnamed portal parameter $1 = '...'",
+     schema: undefined,
+      table: undefined,
    dataType: undefined,
  constraint: undefined,
-       file: "execMain.c",
-    routine: "ExecConstraints",
-       code: "23502"
+       file: "uuid.c",
+    routine: "string_to_uuid",
+       code: "22P02"
 
       at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
 
 Started development server: http://localhost:5000
-<-- POST /api/user/register
-AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
-38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
---> POST /api/user/register [31m500[0m 67ms
-39 |       try {
-40 |         return await query();
-41 |       } catch (e) {
-42 |         throw new DrizzleQueryError(queryString, params, e);
-                   ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
- params: [
-  "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
-],
+Started development server: http://localhost:5000
+<-- GET /api/user/me
+--> GET /api/user/me [32m200[0m 371ms
+<-- GET /api/user/me
+--> GET /api/user/me [32m200[0m 151ms
+<-- GET /api/user/me
+--> GET /api/user/me [32m200[0m 188ms
+<-- GET /api/user/me
+--> GET /api/user/me [33m401[0m 4ms
+Started development server: http://localhost:5000
+<-- GET /api/user/me
+--> GET /api/user/me [33m401[0m 19ms
+Started development server: http://localhost:5000
+<-- GET /api/user/me
+--> GET /api/user/me [33m401[0m 2ms
+<-- GET /api/user/me
+--> GET /api/user/me [32m200[0m 620ms
+Started development server: http://localhost:5000
+62 |     ),.optional(),
+           ^
+error: Expected identifier but found "."
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:62:7
 
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
+62 |     ),.optional(),
+                      ^
+error: Expected "{" but found ","
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:62:18
 
-40 |     res = resolve
-41 |     rej = reject
-42 |   }).catch((err) => {
-43 |     // replace the stack trace that leads to `TCP.onStreamRead` with one that leads back to the
-44 |     // application that created the query
-45 |     Error.captureStackTrace(err)
+67 |     city: z
+             ^
+error: Expected ";" but found ":"
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:67:9
+
+71 |     college: z.string().min(1, "College is required"),
+                ^
+error: Expected ";" but found ":"
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:71:12
+
+72 |     idCard: z.string().url("Invalid URL format"),
                ^
-error: null value in column "id" of relation "users" violates not-null constraint
-     length: 585,
-   severity: "ERROR",
-     detail: "Failing row contains (null, hapati@mailinator.com, Walter Gibson, https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8n..., MALE, 2020-12-23 00:00:00, Labore rerum reicien, Vero anim eos ad ten, Cumque eaque at non , http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/nol..., 1234567890, null, 182, f, null, null, null, 2025-10-03 07:23:20.293892, 2025-10-03 07:23:20.293892, BrWpMCDo3fgAzxgmvKYowfkM9RA3).",
-       hint: undefined,
-   position: undefined,
- internalPosition: undefined,
- internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
-   dataType: undefined,
- constraint: undefined,
-       file: "execMain.c",
-    routine: "ExecConstraints",
-       code: "23502"
+error: Expected ";" but found ":"
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:72:11
 
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
-
-<-- POST /api/user/register
-AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
-38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
---> POST /api/user/register [31m500[0m 49ms
-39 |       try {
-40 |         return await query();
-41 |       } catch (e) {
-42 |         throw new DrizzleQueryError(queryString, params, e);
-                   ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, default, $11, $12, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
- params: [
-  "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
-],
-
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
-
-40 |     res = resolve
-41 |     rej = reject
-42 |   }).catch((err) => {
-43 |     // replace the stack trace that leads to `TCP.onStreamRead` with one that leads back to the
-44 |     // application that created the query
-45 |     Error.captureStackTrace(err)
+73 |     mobile: z
                ^
-error: null value in column "id" of relation "users" violates not-null constraint
-     length: 585,
-   severity: "ERROR",
-     detail: "Failing row contains (null, hapati@mailinator.com, Walter Gibson, https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8n..., MALE, 2020-12-23 00:00:00, Labore rerum reicien, Vero anim eos ad ten, Cumque eaque at non , http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/nol..., 1234567890, null, 182, f, null, null, null, 2025-10-03 07:23:32.129926, 2025-10-03 07:23:32.129926, BrWpMCDo3fgAzxgmvKYowfkM9RA3).",
-       hint: undefined,
-   position: undefined,
- internalPosition: undefined,
- internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
-   dataType: undefined,
- constraint: undefined,
-       file: "execMain.c",
-    routine: "ExecConstraints",
-       code: "23502"
+error: Expected ";" but found ":"
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:73:11
 
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
-
-Started development server: http://localhost:5000
-<-- POST /api/user/register
---> POST /api/user/register [32m200[0m 95ms
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
-<-- POST /api/user/register
-AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
-38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
-39 |       try {
-40 |         return await query();
-41 |       } catch (e) {
-42 |         throw new DrizzleQueryError(queryString, params, e);
+78 |     rollNumber: z.string().optional(),
                    ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, default, $12, $13, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: ,hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, default, $12, $13, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
- params: [
-  null, "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
---> POST /api/user/register [31m500[0m 176ms
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
-],
+error: Expected ";" but found ":"
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:78:15
 
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
-
-40 |     res = resolve
-41 |     rej = reject
-42 |   }).catch((err) => {
-43 |     // replace the stack trace that leads to `TCP.onStreamRead` with one that leads back to the
-44 |     // application that created the query
-45 |     Error.captureStackTrace(err)
-               ^
-error: null value in column "id" of relation "users" violates not-null constraint
-     length: 585,
-   severity: "ERROR",
-     detail: "Failing row contains (null, hapati@mailinator.com, Walter Gibson, https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8n..., MALE, 2020-12-23 00:00:00, Labore rerum reicien, Vero anim eos ad ten, Cumque eaque at non , http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/nol..., 1234567890, null, 182, f, null, null, null, 2025-10-03 07:28:02.660599, 2025-10-03 07:28:02.660599, BrWpMCDo3fgAzxgmvKYowfkM9RA3).",
-       hint: undefined,
-   position: undefined,
- internalPosition: undefined,
- internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
-   dataType: undefined,
- constraint: undefined,
-       file: "execMain.c",
-    routine: "ExecConstraints",
-       code: "23502"
-
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
-
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
-<-- POST /api/user/register
-AsyncHandler Error: 37 |   async queryWithCache(queryString, params, query) {
-38 |     if (this.cache === void 0 || is(this.cache, NoopCache) || this.queryMetadata === void 0) {
---> POST /api/user/register [31m500[0m 184ms
-39 |       try {
-40 |         return await query();
-41 |       } catch (e) {
-42 |         throw new DrizzleQueryError(queryString, params, e);
+79 |     firebaseId: z.string().min(1, "Firebase ID is required"),
                    ^
-error: Failed query: insert into "users" ("id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, default, $12, $13, default, default, default, default, default, default) returning "id", "email", "name", "photo", "gender", "dob", "state", "city", "college", "id_card", "mobile", "fest_id", "roll_number", "firebase_id", "has_paid", "receipt", "transaction_id", "hall", "created_at", "updated_at"
-params: 5e4e41dd-7599-427a-9b82-594857ead2ee,hapati@mailinator.com,Walter Gibson,https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c,MALE,2020-12-23,Labore rerum reicien,Vero anim eos ad ten,Cumque eaque at non ,http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg,1234567890,182,BrWpMCDo3fgAzxgmvKYowfkM9RA3
-  query: "insert into \"users\" (\"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, default, $12, $13, default, default, default, default, default, default) returning \"id\", \"email\", \"name\", \"photo\", \"gender\", \"dob\", \"state\", \"city\", \"college\", \"id_card\", \"mobile\", \"fest_id\", \"roll_number\", \"firebase_id\", \"has_paid\", \"receipt\", \"transaction_id\", \"hall\", \"created_at\", \"updated_at\"",
- params: [
-  "5e4e41dd-7599-427a-9b82-594857ead2ee", "hapati@mailinator.com", "Walter Gibson", "https://lh3.googleusercontent.com/a/ACg8ocJ-SIU-B1Ezk2EX1KwWYf8nOdPL-ASsgOq-vvg3N-VS_q4BF9Fg=s96-c",
-  "MALE", "2020-12-23", "Labore rerum reicien", "Vero anim eos ad ten", "Cumque eaque at non ",
-  "http://res.cloudinary.com/dmvdbpyqk/image/upload/v1759474707/noljha4hvpoo7vuiflzc.jpg",
-  "1234567890", "182", "BrWpMCDo3fgAzxgmvKYowfkM9RA3"
-],
+error: Expected ";" but found ":"
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:79:15
 
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\drizzle-orm\pg-core\session.js:42:15)
+80 | });
+     ^
+error: Unexpected }
+    at D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\validators\user.ts:80:1
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+Started development server: http://localhost:5000
+<-- GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00
+--> GET /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00 [33m400[0m 28ms
+<-- PATCH /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00
+AsyncHandler Error: 26 |         const user = await userService.getUserByUserID(userId);
+27 |         return sendSuccess(c, user, "Fetched user details successfully");
+28 |     },
+29 | 
+30 |     updateUser: async (c: Context) => {
+31 |         const firebaseId = (c as AuthenticatedContext).user.firebaseId;
+--> PATCH /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00 [31m500[0m 59ms
+                                                            ^
+TypeError: undefined is not an object (evaluating 'c.user.firebaseId')
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\controllers\users.ts:31:56)
+      at updateUser (D:\Projects\GDSC\project-xangoes\apps\api\src\controllers\users.ts:30:24)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\asyncHandler.ts:13:34)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\asyncHandler.ts:11:19)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\hono\dist\compose.js:22:23)
+      at dispatch (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\hono\dist\compose.js:6:32)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\schemaValidator.ts:73:19)
 
-40 |     res = resolve
-41 |     rej = reject
-42 |   }).catch((err) => {
-43 |     // replace the stack trace that leads to `TCP.onStreamRead` with one that leads back to the
-44 |     // application that created the query
-45 |     Error.captureStackTrace(err)
+Started development server: http://localhost:5000
+<-- PATCH /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00
+--> PATCH /api/user/76eb0e83-2348-46c2-ab4b-7d671b4a00 [32m200[0m 707ms
+<-- OPTIONS /api/user/register
+--> OPTIONS /api/user/register [32m204[0m 39ms
+<-- POST /api/user/register
+AsyncHandler Error: 89 | export const throwApiError = (
+90 |     message: string,
+91 |     statusCode: number = 500,
+92 |     details?: any
+93 | ): never => {
+94 |     throw new CustomError(message, statusCode, details);
                ^
-error: duplicate key value violates unique constraint "users_email_unique"
-     length: 219,
-   severity: "ERROR",
-     detail: "Key (email)=(hapati@mailinator.com) already exists.",
-       hint: undefined,
-   position: undefined,
- internalPosition: undefined,
- internalQuery: undefined,
-      where: undefined,
-     schema: "public",
-      table: "users",
-   dataType: undefined,
- constraint: "users_email_unique",
-       file: "nbtinsert.c",
-    routine: "_bt_check_unique",
-       code: "23505"
+CustomError: User with given email, mobile, or Firebase ID already exists.
+ statusCode: 409,
+    details: undefined,
 
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\node_modules\pg-pool\index.js:45:11)
+      at throwApiError (D:\Projects\GDSC\project-xangoes\apps\api\src\middlewares\asyncHandler.ts:94:11)
+      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:45:13)
 
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
+--> POST /api/user/register [33m409[0m 971ms
+<-- OPTIONS /api/user/register
+--> OPTIONS /api/user/register [32m204[0m 24ms
 <-- POST /api/user/register
-AsyncHandler Error: 39 |             )
-40 |             .limit(1)
-41 |             .execute();
-42 | 
-43 |         if (existingUser.length > 0) {
---> POST /api/user/register [31m500[0m 163ms
-44 |             throw new Error("User already exists");
-                       ^
-error: User already exists
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:44:19)
+AsyncHandler Error: 89 | export const throwApiError = (
+90 |     message: string,
+91 |     statusCode: number = 500,
+92 |     details?: any
+93 | ): never => {
+94 |     throw new CustomError(message, statusCode, details);
+               ^
+CustomError: User with given email, mobile, or Firebase ID already exists.
+ statusCode: 409,
+    details: undefined,
 
-Started development server: http://localhost:5000
-<-- POST /api/user/register
---> POST /api/user/register [32m200[0m 46ms
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
-<-- POST /api/user/register
-39 |             )
-40 |             .limit(1)
-AsyncHandler Error: 39 |             )
-41 |             .execute();
-42 | 
-43 |         if (existingUser.length > 0) {
-40 |             .limit(1)
-44 |             throw new Error("User with given email or mobile already exists.");
-                       ^
-error: User with given email or mobile already exists.
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:44:19)
-
-41 |             .execute();
-42 | 
---> POST /api/user/register [31m500[0m 44ms
-43 |         if (existingUser.length > 0) {
-44 |             throw new Error("User with given email or mobile already exists.");
-                       ^
-error: User with given email or mobile already exists.
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:44:19)
-
-Started development server: http://localhost:5000
-Started development server: http://localhost:5000
-<-- POST /api/user/register
-AsyncHandler Error: 39 |             )
-40 |             .limit(1)
-41 |             .execute();
-42 | 
---> POST /api/user/register [31m500[0m 92ms
-43 |         if (existingUser.length > 0) {
-44 |             throw new Error("User with given email or mobile already exists.");
-                       ^
-error: User with given email or mobile already exists.
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:44:19)
-
-<-- POST /api/user/register
-AsyncHandler Error: 39 |             )
-40 |             .limit(1)
-41 |             .execute();
-42 | 
---> POST /api/user/register [31m500[0m 50ms
-43 |         if (existingUser.length > 0) {
-44 |             throw new Error("User with given email or mobile already exists.");
-                       ^
-error: User with given email or mobile already exists.
-      at <anonymous> (D:\Projects\GDSC\project-xangoes\apps\api\src\services\user.service.ts:44:19)
-
-Started development server: http://localhost:5000
-<-- POST /api/user/register
-AsyncHandler Error: 39 |             )
-40 |             .limit(1)
